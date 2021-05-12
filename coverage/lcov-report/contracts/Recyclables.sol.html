@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\Recyclables.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Recyclables.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.01% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>65/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>25/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.44% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>68/72</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: ORT
+pragma solidity =0.6.9;
+import "./Owner.sol";
+import "./SafeMath.sol";
+&nbsp;
+//add  safeMath library
+//ahy un tema con el borrar; se puede hacer de 2 formas, una forma es que no se borre nada y una vez que se registra el qr queda en la blockchain. Esta solucion en tiempos de consulta es O(1)
+//la segunda forma es agregare al Struct Recyclable un atributo id, el tema de esta solucion es O(n)
+contract Recyclables is Owner  {
+    
+    struct Recyclable{
+         address owner;
+         bool available;
+         uint id;
+    }
+    
+    using SafeMath for uint;
+&nbsp;
+    Recyclable[] private _recyclables;
+    uint[] private availableRecyclables; 
+&nbsp;
+    mapping (uint =&gt; address) private RecyclableToOwner;
+    mapping (address =&gt; uint) private ownerRecyclableCount;
+    mapping (uint =&gt; uint) private indexes;
+    uint private availableRecyclablesCount = 0;
+    
+    uint private lastIndex = 0;
+    
+   
+    modifier isOwnerRecyclable(address _owner, uint _id) {
+        uint index = indexes[_id];
+        require(RecyclableToOwner[index] == _owner, "Caller is not the Recyclable owner");
+        _;
+    }
+    
+    modifier RecyclableExists(uint _idRecyclable) {
+        require(indexes[_idRecyclable] &gt; 0, "Recyclable does not exists");
+        _;
+    }
+&nbsp;
+    constructor()public{}
+    
+    /**
+     * @dev Deletes the Recyclable from the array, uses the [delete] keyword. It also affects
+     * the RecyclableToOwner mapping as well as the ownerRecyclableCount mapping.
+     *
+     * Requirements:
+     * - `_idRecyclable` musst exists.
+     */
+    function remove(uint _idRecyclable) public RecyclableExists(_idRecyclable) isOwner {
+        uint index = indexes[_idRecyclable];
+        Recyclable memory recyclable = _recyclables[index];
+        bool isLastElement = index == _recyclables.length.sub(1);
+        if(isLastElement){
+          _removeLastCell(_idRecyclable, recyclable);
+        }
+        if(!isLastElement){
+          _removeInTheMiddleCell(_idRecyclable, recyclable);
+        }
+        availableRecyclablesCount = availableRecyclablesCount.sub(1);
+    }
+&nbsp;
+    /**
+     * @dev Creates a new Recyclable and adds it to the _recyclables array. Index 0 is not used.
+     *
+     * Requirements:
+     * - `sender` must be the owner of this contract
+     *
+     * Returns:
+     * - The id of the new Recyclable
+     */
+    function add(uint id) public isOwner {
+        require(indexes[id] == 0, "The bottle already exists" );
+        _add(id);
+    }    
+   
+    /**
+     * @dev Associates the sender with a Recyclables.
+     *
+     * Requirements:
+     * - `_idRecyclable` must exists
+     * - `_idRecyclable` must be available
+     *
+     */
+    function addUserToRecyclable(uint _idRecyclable) public RecyclableExists(_idRecyclable){
+        uint id = indexes[_idRecyclable];
+        require(_recyclables[id].available, "the Recyclable is not available");
+        _recyclables[id] = Recyclable(msg.sender,false,_idRecyclable);
+        RecyclableToOwner[id] = msg.sender;
+        ownerRecyclableCount[msg.sender] = ownerRecyclableCount[msg.sender].add(1);
+        availableRecyclablesCount = availableRecyclablesCount.sub(1);
+    }
+    
+    /**
+     * @dev It sets available = true to the given `_idRecyclable`, sets the owner to 0x0 address, 
+     * and finally it updates the ownerRecyclableCount mapping.
+     *
+     * Requirements:
+     * - `_idRecyclable` must be owned by `_owner`
+     * - `_idRecyclable` must exists
+     *
+     */
+    function useRecyclable(address _owner, uint _idRecyclable) public RecyclableExists(_idRecyclable) isOwnerRecyclable(_owner, _idRecyclable){
+        uint id = indexes[_idRecyclable];
+        RecyclableToOwner[id] = address(0x0);
+        _recyclables[id].owner = address(0x0);
+        _recyclables[id].available = true;
+        ownerRecyclableCount[_owner] = ownerRecyclableCount[_owner].sub(1);
+        availableRecyclablesCount = availableRecyclablesCount.add(1);
+    }
+   
+    /**
+     * @dev Returns if `_idRecyclable` is available
+     *
+     * Requirements:
+     * - `_idRecyclable` must exists
+     *
+     * Returns:
+     * -true if the `_idRecyclable` is available
+     */
+    function isAvailable(uint _idRecyclable) public view RecyclableExists(_idRecyclable)  returns(bool)  {
+        uint id = indexes[_idRecyclable];
+        return _recyclables[id].available;
+    }
+    
+    
+    //tratar de evitar llamar a esta function
+    //Lo mas eficiente es eliminar una botella cuando se deja de usar.. Hablarlo con José
+    /**
+     * @dev Returns all of the Recyclables assigned to `_owner`
+     */
+    function getRecyclablesByOwner(address _owner) external view returns (uint[] memory){
+        uint[] memory result = new uint[](ownerRecyclableCount[_owner]);
+        uint counter = 0;
+        for (uint i = 0; i &lt; _recyclables.length; i++) {
+          if (RecyclableToOwner[i] == _owner) {
+            result[counter] = i;
+            counter++;
+          }
+        }
+        return result;
+    }
+    
+    /**
+     * @dev returns the owner of the given Recyclable
+     *
+     * Requirements:
+     * - `_idRecyclable` must exists
+     *
+     * Returns:
+     * -The owner of the `_idRecyclable
+     */
+    function getOwnerByRecyclable(uint _idRecyclable) public view RecyclableExists(_idRecyclable) returns (address){
+        uint id = indexes[_idRecyclable];
+        return RecyclableToOwner[id];
+    }
+    
+    /**
+     * @dev You get the total amount of Recyclables, it substract one becouse the 0 index is not used
+     *
+     * Returns:
+     * -Total amount of Recyclables
+     */
+    function getAmountRecyclables() public view returns(uint){
+        if(_recyclables.length == 0){
+            return 0;
+        }
+        return _recyclables.length.sub(1);
+    }
+    
+    
+    
+    
+    function getAvailableRecyclables() public view isOwner returns (uint[] memory) {
+        uint[] memory result = new uint[](availableRecyclablesCount);
+        uint lastIndexResultArray = 0;
+         for (uint i = 1; i &lt; _recyclables.length; i++) {
+              if(_recyclables[i].available){
+                  result[lastIndexResultArray] =  _recyclables[i].id;
+                  lastIndexResultArray = lastIndexResultArray.add(1);
+              }
+         }
+         return result;
+    }
+    
+&nbsp;
+    /**
+     * @dev Creates a new Recyclable and adds it to the _recyclables array. Index 0 is not used.
+     *
+     * Returns:
+     * - The id of the new Recyclable
+     */
+    function _add(uint id) private {
+        if(_recyclables.length == 0){
+            Recyclable memory recyclable = Recyclable(address(0x0),false, 0);
+            _recyclables.push(recyclable);
+        }
+        Recyclable memory recyclable = Recyclable(address(0x0),true,id);
+        _recyclables.push(recyclable);
+        lastIndex = id;
+        indexes[id] = _recyclables.length.sub(1);
+        availableRecyclablesCount = availableRecyclablesCount.add(1);
+    }
+&nbsp;
+    /**
+     * @dev Deletes the last element of the array
+     *
+     * Requirements:
+     * - `_idRecyclable` must exists (should be greater than zero).
+     * - the index of the _idRecyclable must be the same as the length of the Recyclables array - 1
+     */
+    function _removeLastCell(uint _idRecyclable, Recyclable memory _recyclable) private RecyclableExists(_idRecyclable) {
+         uint index = indexes[_idRecyclable];
+         <span class="missing-if-branch" title="else path not taken" >E</span>require(index == _recyclables.length.sub(1));
+         <span class="missing-if-branch" title="if path not taken" >I</span>if(_recyclable.owner != address(0x0)){
+<span class="cstat-no" title="statement not covered" >             ownerRecyclableCount[_recyclable.owner] = ownerRecyclableCount[_recyclable.owner].sub(1)</span>;
+             delete RecyclableToOwner[_idRecyclable];
+         }
+         _recyclables.pop();
+    }
+    
+    /**
+     * @dev Deletes an element in the middle of the Recyclable array. For that, it takes the
+     * last cell and swap it's value with the one that wants to be deleted, after that 
+     * it updates the ownerRecyclableCount mapping as well as the RecyclableToOwner and the indexes mapping.
+     * Then it deletes the last element of the array
+     *
+     * Requirements:
+     * - `_idRecyclable` must exists (should be greater than zero).
+     * - the index of the _idRecyclable must be lower as the length of the Recyclables array - 1
+     */
+    function _removeInTheMiddleCell(uint _idRecyclable, Recyclable memory _recyclable) private RecyclableExists(_idRecyclable) {
+        uint index = indexes[_idRecyclable];
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(index &lt; _recyclables.length.sub(1), "element is the last one");
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (_recyclables.length &gt; 1) {
+            uint lastRecyclableId = _recyclables[_recyclables.length.sub(1)].id;
+            _recyclables[index] = _recyclables[_recyclables.length.sub(1)];
+            indexes[lastRecyclableId] = index;
+        }
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(_recyclable.owner != address(0x0)){
+<span class="cstat-no" title="statement not covered" >            ownerRecyclableCount[_recyclable.owner] = ownerRecyclableCount[_recyclable.owner].sub(1)</span>;
+            delete RecyclableToOwner[_idRecyclable];
+        }
+        _recyclables.pop();
+    }
+    
+    
+ 
+&nbsp;
+&nbsp;
+    
+    
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 16 2020 15:56:06 GMT-0300 (GMT-03:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

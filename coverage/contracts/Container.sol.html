@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\Container.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Container.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.74% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>36/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>13/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.12% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>16/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.87% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>37/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: ORT
+pragma solidity =0.6.9;
+&nbsp;
+import "./Owner.sol";
+import "./Recyclables.sol";
+import "./ERC20.sol";
+import "./Intendence.sol";
+import "./SafeMath.sol";
+&nbsp;
+contract Container is Owner {
+    struct Spot {
+         address owner;
+         uint256 timestamp;
+         bool isActive;
+    }
+    
+    Intendence private intendence;
+    Recyclables private recyclables;
+    string public name;
+    mapping (address =&gt; uint256) private _tokensGenerated;
+    mapping (address =&gt; uint256) private _recyclablesRecicled;
+    mapping (address =&gt; bool) private _rewardables;
+    mapping (string =&gt; Spot) private _spots;
+    uint private amountToTransfer;
+    uint private amountRecycled;
+    using SafeMath for uint256;
+&nbsp;
+&nbsp;
+    // checkear porque muchos contenedores van a tener el mismo address
+    constructor(Intendence _intendence, Recyclables _recyclables, string memory _name) public { //I should check both, this contract and the token contract owners are the same
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_intendence.getOwner() == msg.sender,"only the token owner can deploy this contract");
+        intendence = _intendence;
+        recyclables = _recyclables;
+        amountToTransfer = 10;
+        amountToTransfer = 0;
+        addRewardable(msg.sender);
+        name = _name;
+    }
+&nbsp;
+    modifier isRewardable(){
+        require(_rewardables[msg.sender], "sender must be rewardable");
+        _;
+    }
+&nbsp;
+    function setAmountToTransfer(uint _amount) isOwner public {
+        amountToTransfer = _amount;
+    }
+    
+    
+    //todavia hay que pensar como se van a enviar los tokens del contenedor a la cuenta del que metio la botella (bottleOwner)
+    /**
+     * @dev Sends the reward to the address assigned to the id bottle.
+     * Requirements:
+     *
+     * - `sender` must be the owner of this contract.
+     * - `this contract should have enough balance in order to send the tokens
+     */
+    function reward(uint _idRecyclable) isRewardable public{
+        address recyclableOwner = recyclables.getOwnerByRecyclable(_idRecyclable);
+        recyclables.useRecyclable(recyclableOwner,_idRecyclable);
+        _transfer(recyclableOwner);
+    }
+    
+    /**
+     * @dev Sends the reward to the entity address specified to the id bottle.
+     * Requirements:
+     *
+     * - `sender` must be the owner of this contract.
+     * - `this contract should have enough balance in order to send the tokens
+     */
+    function rewardEntity(uint _idRecyclable, address _entityAddress) isRewardable public{
+        address recyclableOwner = recyclables.getOwnerByRecyclable(_idRecyclable);
+        recyclables.useRecyclable(recyclableOwner,_idRecyclable);
+        _transfer(_entityAddress);
+    }
+    
+    function getRecyclablesRecycled() public view returns(uint){
+        return _recyclablesRecicled[msg.sender];
+    }
+    
+    function getAmountTokensGenerated() public view returns(uint){
+        return _tokensGenerated[msg.sender];
+    }
+    /**
+     * @dev get the address of this contract
+     */
+    function getAddress() public view returns(address){
+        return address(this);
+    }
+&nbsp;
+    function getIntendence() public view returns (Intendence){
+        return intendence;
+    }
+&nbsp;
+    function getRecyclables() public view returns (Recyclables){
+        return recyclables;
+    }
+    
+    
+    function addSpot(string memory _name) public isOwner {
+        require(!_spots[_name].isActive, "The spot already exists");
+        _spots[_name] = Spot(address(0x0),0,true);
+    }
+    
+    function associateSpot(string memory _name) public {
+        require(_spots[_name].isActive, "incorrect container");
+        require(_spots[_name].owner != msg.sender, "the user is already associated");
+        require(now &gt; _spots[_name].timestamp + 1 minutes, "must wait 1 minute");
+        _spots[_name].owner = msg.sender;
+        _spots[_name].timestamp = now;
+    }
+    
+    function rewardSpot(string memory _name) public isRewardable {
+        require(_spots[_name].isActive, "incorrect container");
+        address userAssociated = _spots[_name].owner;
+        _transfer(userAssociated);
+    }
+&nbsp;
+    function getTotalAmountRecycled() public view returns(uint) {
+        return amountRecycled;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function isContainerRestricted(string memory _name) public view returns(bool){</span>
+<span class="cstat-no" title="statement not covered" >        require(_spots[_name].isActive, "incorrect container")</span>;
+<span class="cstat-no" title="statement not covered" >        return (now &lt; _spots[_name].timestamp + 1 minutes);</span>
+    }
+    
+    function _transfer(address recyclableOwner) private {
+        intendence.transfer(recyclableOwner,amountToTransfer);
+        _tokensGenerated[recyclableOwner] = _tokensGenerated[recyclableOwner].add(amountToTransfer);
+        _recyclablesRecicled[recyclableOwner] = _recyclablesRecicled[recyclableOwner].add(1);
+        amountRecycled = amountRecycled.add(1);
+    }
+&nbsp;
+    function addRewardable(address newRewardable) public isOwner{
+        _rewardables[newRewardable] = true;
+    }
+        
+    
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 16 2020 15:56:06 GMT-0300 (GMT-03:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
