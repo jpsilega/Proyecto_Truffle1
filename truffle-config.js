@@ -22,7 +22,7 @@
 
 const WalletProvider = require('@truffle/hdwallet-provider');
 
-const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
+//const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
 
 
 
