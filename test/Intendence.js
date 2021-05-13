@@ -1,5 +1,5 @@
 const Intendence = artifacts.require("Intendence");
-const Erc20 = artifacts.require("Erc20");
+const Erc20 = artifacts.require("ERC20");
 const truffleAssert = require('truffle-assertions');
 
 contract("Intendence", accounts => {
