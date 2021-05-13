@@ -1,5 +1,5 @@
 //const recyclables = artifacts.require("./contracts/recyclables.sol");  //Ver esto
-const recyclables = artifacts.require("./contracts/Recyclables");
+const recyclables = artifacts.require("Recyclables");
 const truffleAssert = require('truffle-assertions');
 
 

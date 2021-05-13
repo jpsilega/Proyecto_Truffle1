@@ -1,4 +1,4 @@
-const Erc20 = artifacts.require("./contracts/ERC20");
+const Erc20 = artifacts.require("ERC20");
 var meta;
 
 

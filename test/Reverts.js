@@ -1,7 +1,7 @@
-const Container = artifacts.require("./contracts/Container");
-const Intendence = artifacts.require("./contracts/Intendence");
-const Erc20 = artifacts.require("./contracts/Erc20");
-const recyclables = artifacts.require("./contracts/Recyclables");
+const Container = artifacts.require("Container");
+const Intendence = artifacts.require("Intendence");
+const Erc20 = artifacts.require("Erc20");
+const recyclables = artifacts.require("Recyclables");
 
 const truffleAssert = require('truffle-assertions');
 //const Web3 = require('web3');
