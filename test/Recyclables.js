@@ -7,7 +7,7 @@ contract("Recyclables", accounts => {
   var meta;
   var recyclableoOneCreator = accounts[0];
 
-  it("getAmountRecyclables with no length 0", () => 
+/*  it("getAmountRecyclables with no length 0", () => 
     recyclables.deployed()
       .then(function (instance) {
         meta = instance;
@@ -20,7 +20,7 @@ contract("Recyclables", accounts => {
           "the length should be 0"
         );
       })
-    );
+    );*/
 
   it("adding recyclable and checking its availability", () =>  
     recyclables.deployed()

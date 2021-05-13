@@ -92,19 +92,15 @@ contract("Reverts", accounts => {
 
     
 
-it("Associating an already associated spot with the same account", async function () { 
+/*it("Associating an already associated spot with the same account", async function () { 
   
     Container.deployed()
     .then(async function (instance) {
     meta = instance;
      await truffleAssert.reverts(meta.associateSpot("test", { from: accounts[2] }), null, "the user is already associated");
    });    
-  
-   //done();
-  
-        
-      
-  });
+       
+  });*/
 
 it("Associating an already associated spot with different account, should wait one minute!", async function ()   {
 

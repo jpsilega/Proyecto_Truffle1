@@ -14,7 +14,7 @@ contract("Erc20", accounts => {
 
   describe("Erc20 Iteraciones",  function () { 
   
-  it("Getting the owner of the contract", () =>  
+ /* it("Getting the owner of the contract", () =>  
     
     Erc20.deployed()
       .then(instance => instance.getOwner.call({ from: accounts[0] }))
@@ -25,7 +25,7 @@ contract("Erc20", accounts => {
           "wrong owner"
         );
       })
-    );
+    );*/
 
   it("checking 0 balance", () =>  
     Erc20.deployed()
